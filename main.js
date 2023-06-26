@@ -243,8 +243,8 @@ fn_setSobremi();
 fn_setContacto();
 fn_setRecomendaciones();
 fn_setPartners();
+fn_setRedes();
 document.addEventListener('DOMContentLoaded', function () {
-    fn_setRedes();
     fn_setEnviar();
 
 });
