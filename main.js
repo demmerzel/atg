@@ -5,25 +5,6 @@ function asignarEvento(){
 
 }
 
-function fn_setCentral() {
-    document.addEventListener('DOMContentLoaded', function () {
-        var a = document.getElementById("portfolioContent");
-        a.innerHTML = BODY_TEXT;
-
-        //Lo que vamos a meter es un grid/listado de imagenes 
-        //con columnas dinamicas segun espacio
-        var html = '<div class="grid gridColumns" style="">';
-        for(var i in libros){
-            var item = libros[i];
-            html += testTemplate.replace("{img}", item.img);
-        }
-        html += "<div>";
-
-        a.innerHTML = html;
-
-
-    }, false);
-}
 
 function fn_reemplazarContenido(id, html){
     document.addEventListener('DOMContentLoaded', function () {
@@ -44,10 +25,11 @@ function fn_setPortfolio() {
 }
 
 function fn_setLibros() {
-    var html = '<div class="grid gridColumns" style="">';
+    var html = '<div class="cabeceraLibros" style=""></div>';
+    html += '<div class="gridLibros libros" style="">';
     for(var i in  libros){
         var item = libros[i];
-        html += testTemplate.replace("{img}", item.img);
+        html += testTemplate.replace("{img}", item.img).replace("{descripcion}", item.subtitulo);
     }
     html += "<div>";
 
@@ -235,7 +217,6 @@ function fn_setEnviar(){
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 fn_setMenu();
-// fn_setCentral();
 fn_setPortfolio();
 fn_setLibros();
 fn_setSubmenuButtons();
