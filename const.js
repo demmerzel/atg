@@ -54,13 +54,13 @@ var SUBMENU_BUTTONS =
     '    <a >Submenu3</a>'+
     '</div>'+
 '</div>'+
-'<div class="dropdown" >'+
-    '<div class="submenuButton"  id="buttonRecomendaciones">Recomendaciones</div>'+
-    '<div class="dropdown-content" >'+
-    '    <a >Submenu1</a>'+
-    '    <a >Submenu2</a>'+
-    '    <a >Submenu3</a>'+
-    '</div>'+
+// '<div class="dropdown" >'+
+//     '<div class="submenuButton"  id="buttonRecomendaciones">Recomendaciones</div>'+
+//     '<div class="dropdown-content" >'+
+//     '    <a >Submenu1</a>'+
+//     '    <a >Submenu2</a>'+
+//     '    <a >Submenu3</a>'+
+//     '</div>'+
 // '</div>'+
 '</div>'+
 '<div class="dropdown" >'+

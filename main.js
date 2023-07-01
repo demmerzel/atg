@@ -77,7 +77,7 @@ function fn_setCapas(){
     fn_hideCapa("libros")
     fn_hideCapa("sobremi")
     fn_hideCapa("contacto")
-    fn_hideCapa("recomendaciones")
+    // fn_hideCapa("recomendaciones")
     fn_hideCapa("links")
     fn_showCapa(m_menuSelected);
 }
@@ -107,11 +107,11 @@ function fn_setSubmenuButtons() {
             m_menuSelected = "contacto"
             fn_setCapas();
         });
-        var b5 = document.getElementById("buttonRecomendaciones");
-        b5.addEventListener("click", function(){
-            m_menuSelected = "recomendaciones"
-            fn_setCapas();
-        });
+        // var b5 = document.getElementById("buttonRecomendaciones");
+        // b5.addEventListener("click", function(){
+        //     m_menuSelected = "recomendaciones"
+        //     fn_setCapas();
+        // });
         var b6 = document.getElementById("buttonLinks");
         b6.addEventListener("click", function(){
             m_menuSelected = "links"
@@ -123,24 +123,10 @@ function fn_setSubmenuButtons() {
         fn_hideCapa("libros")
         fn_hideCapa("sobremi")
         fn_hideCapa("contacto")
-        fn_hideCapa("recomendaciones")
+        // fn_hideCapa("recomendaciones")
         fn_hideCapa("links")
         m_menuSelected = "portfolio";
         fn_showCapa(m_menuSelected);
-
-
-
-
-        buttonPorftolio
-        buttonLibros
-        buttonSobremi
-        buttonContacto
-        buttonRecomendaciones
-
-        // var sb1 = document.getElementById("submenuButton1");
-        // sb1.addEventListener('mouseover', function () {
-        //     // alert("hola");
-        // });
         
     }, false);
 }
@@ -172,6 +158,7 @@ function fn_setLinks(){
         item.linkImgName += "grid-column:2;";
         item.linkImgName += "color:white;";
         item.linkImgName += "font-weight:bold;";
+        item.linkImgName += "margin-left:10px;";
 
 
 
@@ -278,7 +265,7 @@ fn_setLibros();
 fn_setSubmenuButtons();
 fn_setSobremi();
 fn_setContacto();
-fn_setRecomendaciones();
+// fn_setRecomendaciones();
 fn_setLinks();
 // fn_setPartners();
 // fn_setRedes();

@@ -239,6 +239,7 @@
 
 .centro {
   width: 100%;
+  margin-right: 40px;
 }
 
 .caja {
@@ -635,6 +636,23 @@
   -webkit-box-shadow: 0px 1px 10px;
           box-shadow: 0px 1px 10px;
   height: 415px;
+  right: 0px;
+}
+
+.imagenBio2 {
+  background-image: url(./img/portfolio/img8.png);
+  background-size: contain;
+  width: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  margin: 10px;
+  max-width: 300px;
+  min-width: 200px;
+  height: 310px;
+  position: absolute;
+  right: 180px;
+  top: calc(100% - 340px);
+  right: 30px;
 }
 
 .biografia {
@@ -816,14 +834,14 @@
   background-size: contain;
   position: absolute;
   top: calc(100% - 300px);
-  right: 165px;
+  right: 30px;
 }
 
 .formContacto {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 80% 10%;
-      grid-template-columns: 10% 80% 10%;
+  -ms-grid-columns: 1% 80% 19%;
+      grid-template-columns: 1% 80% 19%;
 }
 
 .formContacto2 {
@@ -848,7 +866,11 @@
   border-radius: 20px;
   font-family: system-ui;
   letter-spacing: 2px;
-  font-size: larger;
+  font-size: x-large;
+  -webkit-box-shadow: 4px 4px 3px 0px #d5d5d5;
+          box-shadow: 4px 4px 3px 0px #d5d5d5;
+  max-width: 700px;
+  margin-top: 15px;
 }
 
 .links .gridLinks .linkImg {
@@ -898,5 +920,20 @@
 
 .linksList {
   margin-top: 150px;
+}
+
+.imagenBio3 {
+  background-image: url(./img/portfolio/img12.png);
+  background-size: contain;
+  width: -webkit-fill-available;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  margin: 10px;
+  max-width: 185px;
+  min-width: 185px;
+  height: 310px;
+  position: absolute;
+  top: calc(100% - 340px);
+  right: 0px;
 }
 /*# sourceMappingURL=main.css.map */
