@@ -17,7 +17,10 @@ function fn_setPortfolio() {
     var html = '<div class="grid gridColumns" style="">';
     for(var i in portfolio){
         var item = portfolio[i];
-        html += testTemplatePortfolio.replace("{img}", item.img);
+        html += testTemplatePortfolio
+        .replace("{img}", item.img)
+        .replace("{ancho}", item.ancho)
+        .replace("{alto}", item.alto);
     }
     html += "<div>";
 
@@ -75,6 +78,7 @@ function fn_setCapas(){
     fn_hideCapa("sobremi")
     fn_hideCapa("contacto")
     fn_hideCapa("recomendaciones")
+    fn_hideCapa("links")
     fn_showCapa(m_menuSelected);
 }
 function fn_setSubmenuButtons() {
@@ -108,6 +112,11 @@ function fn_setSubmenuButtons() {
             m_menuSelected = "recomendaciones"
             fn_setCapas();
         });
+        var b6 = document.getElementById("buttonLinks");
+        b6.addEventListener("click", function(){
+            m_menuSelected = "links"
+            fn_setCapas();
+        });
 
 
         fn_hideCapa("portfolio")
@@ -115,6 +124,7 @@ function fn_setSubmenuButtons() {
         fn_hideCapa("sobremi")
         fn_hideCapa("contacto")
         fn_hideCapa("recomendaciones")
+        fn_hideCapa("links")
         m_menuSelected = "portfolio";
         fn_showCapa(m_menuSelected);
 
@@ -147,6 +157,34 @@ function fn_setContacto(){
 function fn_setRecomendaciones(){
     var html = 'Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones Recomendaciones';
     fn_reemplazarContenido("recomendaciones", html);
+}
+function fn_setLinks(){
+    var html = "";
+    for(var i in  links){
+        var item = links[i];
+        item.linkImgStyle = "grid-row:"+(parseInt(i)+1)+";";
+        item.linkImgStyle += "grid-column:1;";
+        item.linkImgStyle += "background-image: url(" + item.imgUrl + ");";
+        item.linkImgStyle += "background-size: contain;";
+        item.linkImgStyle += "background-repeat: no-repeat;";
+
+        item.linkImgName = "grid-row:"+(parseInt(i)+1)+";";
+        item.linkImgName += "grid-column:2;";
+        item.linkImgName += "color:white;";
+        item.linkImgName += "font-weight:bold;";
+
+
+
+        html += link
+        .replace("{linkImgStyle}", item.linkImgStyle)
+        .replace("{linkName}", item.url)
+        .replace("{linkImgName}", item.linkImgName);
+
+
+
+    }
+    
+    fn_reemplazarContenido("linksList", html);
 }
 
 function fn_setPartners(){
@@ -241,8 +279,9 @@ fn_setSubmenuButtons();
 fn_setSobremi();
 fn_setContacto();
 fn_setRecomendaciones();
-fn_setPartners();
-fn_setRedes();
+fn_setLinks();
+// fn_setPartners();
+// fn_setRedes();
 document.addEventListener('DOMContentLoaded', function () {
     fn_setEnviar();
 

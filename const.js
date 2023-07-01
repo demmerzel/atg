@@ -1,6 +1,7 @@
 var testTemplatePortfolio = 
 '<div class="cajaPortfolio" >'+
-    '<div class="imagenPortfolio" style="background-image: url({img})"></div>' +
+    '<div class="imagenPortfolio" style="background-image: url({img}); "></div>' +
+    // '<div class="imagenPortfolio" style="background-image: url({img}); width:{ancho}px;height:{alto}px;"></div>' +
 '</div>';
 var testTemplate = 
 '<div class="{cajaLibro}" >'+
@@ -10,6 +11,12 @@ var testTemplate =
         '<div class="titulo">{titulo}</div>'+
         '<div class="resumen">{resumen}</div>'+
     '</div>'+
+'</div>';
+
+var link = 
+'<div class="link">'+
+    '<div class="" style="{linkImgStyle}"></div>'+
+    '<div class="" style="{linkImgName}">{linkName}</div>'+
 '</div>';
 
 
@@ -49,6 +56,15 @@ var SUBMENU_BUTTONS =
 '</div>'+
 '<div class="dropdown" >'+
     '<div class="submenuButton"  id="buttonRecomendaciones">Recomendaciones</div>'+
+    '<div class="dropdown-content" >'+
+    '    <a >Submenu1</a>'+
+    '    <a >Submenu2</a>'+
+    '    <a >Submenu3</a>'+
+    '</div>'+
+// '</div>'+
+'</div>'+
+'<div class="dropdown" >'+
+    '<div class="submenuButton"  id="buttonLinks">links</div>'+
     '<div class="dropdown-content" >'+
     '    <a >Submenu1</a>'+
     '    <a >Submenu2</a>'+
