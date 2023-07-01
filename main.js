@@ -25,13 +25,31 @@ function fn_setPortfolio() {
 }
 
 function fn_setLibros() {
-    var html = '<div class="cabeceraLibros" style=""></div>';
-    html += '<div class="gridLibros libros" style="">';
+    var html = '<div class="cabeceraLibros"></div>';
+    html += '<div id="escoba"></div>';
+    html += '<div class="">';
+    html += '<div class="gridLibros libros">';
+
+    var html = 
+    '<div class="cabeceraLibros"></div>'+
+    '   <div id="escoba"></div>'+
+    '   <div class="columnasLibros">'+
+    '       <div class="librosLeft"></div>'+
+    '       <div class="gridLibros libros">';
+   
     for(var i in  libros){
         var item = libros[i];
-        html += testTemplate.replace("{img}", item.img).replace("{descripcion}", item.subtitulo);
+        html += testTemplate
+        .replace("{img}", item.img)
+        .replace("{descripcion}", item.subtitulo)
+        .replace("{titulo}", item.titulo)
+        .replace("{resumen}", item.resumen)
+        .replace("{cajaLibro}", item.cajaLibro);
     }
-    html += "<div>";
+    
+    html += "       </div>";
+    html += '   <div class="librosRight"></div>';
+    html += "</div>";
 
     fn_reemplazarContenido("libros", html);
 }

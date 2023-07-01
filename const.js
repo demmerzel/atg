@@ -3,9 +3,13 @@ var testTemplatePortfolio =
     '<div class="imagenPortfolio" style="background-image: url({img})"></div>' +
 '</div>';
 var testTemplate = 
-'<div class="cajaLibro" >'+
+'<div class="{cajaLibro}" >'+
     '<div class="imagen" style="background-image: url({img})"></div>' +
-    '<div class="descripcion" style="grid-column:1; grid-row:2; text-align:center; ">{descripcion}</div>'+
+    '<div class="frase" style="text-align:center; ">{descripcion}</div>'+
+    '<div class="descripcion">'+
+        '<div class="titulo">{titulo}</div>'+
+        '<div class="resumen">{resumen}</div>'+
+    '</div>'+
 '</div>';
 
 
