@@ -64,7 +64,7 @@ var SUBMENU_BUTTONS =
 // '</div>'+
 '</div>'+
 '<div class="dropdown" >'+
-    '<div class="submenuButton"  id="buttonLinks">links</div>'+
+    '<div class="submenuButton"  id="buttonLinks">Links</div>'+
     '<div class="dropdown-content" >'+
     '    <a >Submenu1</a>'+
     '    <a >Submenu2</a>'+
